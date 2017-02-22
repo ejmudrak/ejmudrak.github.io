@@ -17,12 +17,61 @@ import RaisedButton from 'material-ui/RaisedButton';
 export default class Home extends React.Component {  
     render() {
         return (
-            <div>
-              <h2>Erik Mudrak</h2>
+            <div className="container">
+            	<Menu />
+            	<About />
+            	<Code />
+            	<Design />
             </div>
         );
     }             
 }
 
+var Menu = React.createClass({
+	
+	render: function {
+		return (
+			<div>
+				<nav>
+					<a href='#'>ERIK MUDRAK</a>
+					<a href='#'>CODE</a>
+					<a href='#'>DESIGN</a>
+				</nav>
+			</div>
+		);
+	}
+})
 
+var About = React.createClass({
+	
+	render: function {
+		return (
+			<div>
+
+			</div>
+		);
+	}
+})
+
+var Menu = React.createClass({
+	
+	render: function {
+		return (
+			<div>
+
+			</div>
+		);
+	}
+})
+
+var Menu = React.createClass({
+	
+	render: function {
+		return (
+			<div>
+
+			</div>
+		);
+	}
+})
 
