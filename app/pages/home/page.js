@@ -18,10 +18,11 @@ export default class Home extends React.Component {
     render() {
         return (
             <div className="container">
-            	<Menu />
-            	<About />
-            	<Code />
-            	<Design />
+            	<h1>ERIK MUDRAK</h1?
+            	// <Menu />
+            	// <About />
+            	// <Code />
+            	// <Design />
             </div>
         );
     }             

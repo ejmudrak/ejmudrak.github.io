@@ -6,7 +6,7 @@
 	height: 100vh;
 }
 
-p, a {
+h1, p, a {
 	font-family: 'Roboto', sans-serif;
 	color: black;
 }
