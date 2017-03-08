@@ -1,17 +1,14 @@
 {
   "name": "ejmudrak",
   "description": "Personal website",
-  "homepage": "https://myusername.github.io/",
+  "homepage": "https://ejmudrak.github.io/",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --progress --colors --content-base app --port 8080",
     "build": "webpack -p --progress --config webpack.production.config.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/andrewellis51/savvySamaritans.git"
-  },
+
   "dependencies": {
     "react": "^0.x.x",
     "react-dom": "^0.x.x"
