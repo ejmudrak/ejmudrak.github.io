@@ -29,28 +29,21 @@ export default class Home extends React.Component {
               <div className={styles.heading}>Erik Mudrak</div>
               <div className={styles.subheading}>{subheading}</div>
               <div className={styles.portfolio}>
-                <Code />
-                <Design />
+                <CodeButton />
+                <DesignButton />
+                <CodeLogo />
+                <DesignLogo />
               </div>
             </div>
         );
     }
 }
 
-var Code = React.createClass({
+var CodeButton = React.createClass({
 
 	render: function () {
 		return (
 			<div>
-        <a href='http://github.com/ejmudrak'>
-          <Avatar
-            className={styles.codeIcon}
-            size={250}
-            icon={<CodeIcon />}
-            color={primaryColor}
-            backgroundColor={secondaryColor}
-          />
-        </a>
         <RaisedButton
           className={[styles.button, styles.code].join(' ')}
           href='http://www.github.com/ejmudrak'
@@ -63,20 +56,27 @@ var Code = React.createClass({
 	}
 })
 
-var Design = React.createClass({
+var CodeLogo = React.createClass ({
+
+  render: function () {
+    return (
+      <a className={styles.codeIcon} href='http://github.com/ejmudrak'>
+        <Avatar
+          size={250}
+          icon={<CodeIcon />}
+          color={primaryColor}
+          backgroundColor={secondaryColor}
+        />
+      </a>
+    );
+  }
+})
+
+var DesignButton = React.createClass ({
 
 	render: function () {
 		return (
 			<div>
-        <a href='http://www.behance.net/ejmudrak'>
-          <Avatar
-            className={styles.designIcon}
-            size={250}
-            icon={<DesignIcon />}
-            color={primaryColor}
-            backgroundColor={secondaryColor}
-          />
-        </a>
         <RaisedButton
           className={[styles.button, styles.design].join(' ')}
           href='http://www.behance.net/ejmudrak'
@@ -87,4 +87,20 @@ var Design = React.createClass({
 			</div>
 		);
 	}
+})
+
+var DesignLogo = React.createClass ({
+
+  render: function () {
+    return (
+      <a className={styles.designIcon} href='http://www.behance.net/ejmudrak'>
+        <Avatar
+          size={250}
+          icon={<DesignIcon />}
+          color={primaryColor}
+          backgroundColor={secondaryColor}
+        />
+      </a>
+    );
+  }
 })
