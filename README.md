@@ -1,22 +1,22 @@
-#### Personal Portfolio Site - Erik Mudrak
+# Erik Mudrak - Portfolio Site
 
-### Quick Start
+## Quick Start
 
-# Development
+### Development
 ```ShellSession
 npm install
 npm start
 # Go to http://localhost:8080
 ```
 
-# Building
+### Building
 ```ShellSession
 npm install
 npm build
 # Check bundle.js
 ```
 
-# Deploying site to the web
+### Deploying site to the web
 ```ShellSession
 npm install
 npm deplay
