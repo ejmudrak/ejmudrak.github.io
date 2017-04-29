@@ -160,7 +160,7 @@ p {
 .bottomWrapper {
   position: relative;
   display: block;
-  bottom: -4em;
+  bottom: -1em;
   left: 2em;
 }
 
