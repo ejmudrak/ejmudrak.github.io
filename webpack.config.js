@@ -26,7 +26,20 @@ module.exports = {
         test: /\.css$/,
         loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
       },
-      { test: /\.svg$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
+      { test: /\.svg$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
+      { test: /\.png$/, loader: "url-loader?limit=10000&mimetype=image/png" },
+      // {
+      //     test: /\.scss$/,
+      //     loaders: ['style', 'css', 'sass']
+      // }
+      // {
+      //   test: /\.(jpe?g|png|gif|svg)$/i,
+      //   loaders: [
+      //     'url-loader?limit=10000',
+      //     'img-loader'
+      //   ]
+      // }
+
     ],
   },
     resolve: {

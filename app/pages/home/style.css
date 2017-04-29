@@ -1,93 +1,407 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|VT323|Quicksand|IM+Fell+English+SC');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700');
 
 @font-face {
   font-family: 'Galano';
   src: url('/assets/fonts/Galano Grotesque DEMO Bold.otf');
 }
 
+/*$primaryColor: #fff;*/
+
+/* ----------------------- GENERAL STYLES ------------------------ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  /*background-color: #ffaacc;*/
+  background: linear-gradient(90deg, #ffaacc, #e07694);
+  background-size: cover;
+  background-attachment: fixed;
+
+/*   background: linear-gradient(90deg, #fff, #e07694);
+   background-size: 200% 200%;
+
+   -webkit-animation: BackgroundGradient 10s ease infinite;
+   -moz-animation: BackgroundGradient 10s ease infinite;
+   animation: BackgroundGradient 10s ease infinite;*/
+}
+
+@-webkit-keyframes BackgroundGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BackgroundGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BackgroundGradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+p {
+  color: #4A5DEC;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+}
+
 .container {
-	background-color: white;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
-.heading {
-	display: block;
-	margin: auto;
-	width: 600px;
-	margin-top: 1.5em;
-
-	font-family: 'Galano', 'Roboto', sans-serif;
-	font-size: 99px;
-	color: #7a5de2;
-}
-
-.subheading {
-    /*position:absolute;*/
-    z-index: 0;
-
-    display: block;
-    margin: auto;
-    width: 600px;
-    margin-top: 0;
-    margin-bottom: 1em;
-
-    text-align: center;
-    font-family: 'VT323', 'Quicksand', sans-serif;
-    font-size: 34px;
-    color: #7a5de2;
-}
-.portfolio {
-  width: 600px;
-  display: block;
-  margin: auto;
-}
-
-.label {
-  font-family: 'VT323';
-}
-.codeIcon {
+.backgroundTriangle {
   position: absolute;
-  z-index: 0 !important;
-  left: 1.85em;
-  top: 3.3em;
-  /*float: left;*/
+  z-index: 0;
+  float: left;
+  bottom: 0;
+  background-color: #4A5DEC;
+  width: 60%;
+  height: 70%;
+
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+/* ----------------------- ABOUT STYLES ------------------------ */
+
+.aboutContainer {
+  position: relative;
+  z-index: 1;
+
+  margin-left: 10%;
+  margin-top: 4%;
+
+  padding-right: 1%;
+
+  width: 54%;
+  height: 87%;
+  float: left;
+  background-color: #fff; 
+}
+
+.aboutHeading {
+
+  color: #4A5DEC;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 6em;
+
+  padding-right: 3em;
+
+  vertical-align: top;
+  margin-top: 0.15em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: block;
+  width: 100%;
+}
+
+.line {
+  width: 85%;
+  height: 0.25em;
+  background-color: #4A5DEC;
+  margin-left: 3.5em;
+  border-radius: 10em;
+}
+
+.topWrapper {
+  display: inline-block;
+}
+
+.portraitWrapper {
+  position: relative;
+  z-index: 1;
+
+  width: 8em;
+  height: 9em;
+  overflow: hidden;
+  border-radius: 100em;
+  margin-top: 1.5em;
+  margin-left: 4em;
+  float: left;
+}
+
+.portrait {
+  height: auto;
+  width: 100%;
+  margin-top: -2em;
+}
+
+.aboutText {
+  margin-left: 11.5em;
+  margin-right: 0.5em;
+  margin-top: 3em;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+@keyframes slideIn {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  75% {
+    transform-origin: left;
+    transform: scaleX(1.075);
+  }  
+  100% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+
+/* ----------- STYLES FOR CONTENT AT BOTTOM OF ABOUT ---------- */
+
+.bottomWrapper {
+  position: relative;
+  display: block;
+  bottom: -4em;
+  left: 2em;
+}
+
+.blocks {
+  margin: 0;
+}
+
+.block1 {
+  position: relative;
+  z-index: 2;
+
+  width: 12em;
+  height: 12em;
+  background-color: #e07694;
+  float: left;
+  margin-top: 3em;
+  margin-left: -5em;
+}
+
+.block2 {
+  position: relative;
+  z-index: 3;
+
+  width: 11em;
+  height: 7em;
+  background-color: #4A5DEC;
+  float: left;
+  margin-top: 9.5em;
+  margin-left: -5em;
+}
+
+.block3 {
+  position: relative;
+  z-index: 2;
+
+  width: 8em;
+  height: 6em;
+  background-color: #d95779;
+  float: left;
+
+  margin-top: 7.5em;
+  margin-left: -2em;
+}
+
+.circle1 {
+  position: relative;
+  z-index: 3;
+
+  width: 5em;
+  height: 5em;
+  background-color: #4A5DEC;
+  float: left;
+  border-radius: 50em;
+  margin-top: 10em;
+  margin-left: -3em;
+}
+
+.codeSnippet {
+  width: 45%;
+  /*height: 45%;*/
+  /*transform: scale(0.55, 0.55);*/
+  /*float: right;*/
+  margin-top: 6em;
+  margin-bottom: 0;
+  margin-left: 4em;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* ----------------------- PORTFOLIO STYLES ------------------------ */
+
+.portfolioContainer {
+
+  position: relative;
+  z-index: 1;
+
+  animation: slideIn 0.4s ease-out;
+  margin-right: 10%;
+  margin-top: 4%;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+
+  background-color: #4A5DEC;
+  width: 25%;
+  height: 87%;
+  float: right;
+}
+
+.portfolioHeading {
+  vertical-align: top;
+  text-align: center;
+  margin-top: 0.25em;
+  display: block;
+
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+.iconWrapper {
+  text-decoration: none;
+  display: block;
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+.circle {
+  width: 10em;
+  height: 10em;
+  border-radius: 50em;
+  -moz-border-radius: 50em;
+  -webkit-border-radius: 50em;
+  border-radius: 50em;
+  background-color: #fff !important;
+  animation: buttonFall 0.5s forwards;
+}
+
+.circle:hover {
+  animation: buttonHover 0.5s forwards;
+}
+
+@keyframes buttonHover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1em);
+  }
+}
+
+@keyframes buttonFall {
+  0% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.codeIcon {
+  width: 80%;
+  position: relative;
+  left: 1em;
+  top: 2em;
 }
 
 .designIcon {
-  position: absolute;
-  z-index: 0 !important;
-  right: 1.85em;
-  top: 3.3em;
-  /*float: right;*/
-}
-.button {
-  z-index: 2 !important;
-  width: 200px;
+  width: 80%;
+  position: relative;
+  left: 1em;
+  top: 3em;
 }
 
-.code {
+.label {
+  text-decoration: none;
+  display: inline;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  font-size: 2em;
+  margin-top: -3em;
+  margin-left: 6em;
   float: left;
-  margin-left: 3.5em;
 }
 
-.design {
-  float: right;
-  margin-right: 3.5em;
+/* ----------------------- RESPONSIVE STYLES ------------------------ */
+
+@media all and (max-width: 1350px) {
+  .label {
+    display: block;
+    margin-top: 0.5em;
+    margin-left: 1.5em;
+  }
+
+}
+
+@media all and (max-width: 900px) and (max-device-width: 900px){
+.aboutHeading { font-size: 5em; }
+.portraitWrapper { margin-left: 2em; }
+.aboutText { margin-left: 10em; }
+.portfolioHeading { font-size: 2em; }
+.circle { width: 7em; height: 7em; }
+.codeIcon { top: 1.5em; left: 0.75em;}
+.designIcon { top: 2em; left: 0.75em;}
+.label { font-size: 1.5em; }
+}
+
+@media all and (max-width: 750px) and (max-device-width: 750px) {
+  
+  .aboutText {
+    float: left;
+    margin-top: 1em;
+    margin-left: 2em;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .aboutContainer {
+    margin-top: 10%;
+    width: 225%;
+    height: 200%;
+    float: none;
+
+  }
+  .portfolioContainer { 
+    position: relative;
+    z-index: 3;
+    float: none;
+    width: 142%;
+    height: 75%;
+    margin-top: -200%;
+    margin-left: 50%;
+    border-radius: 0.5em;
+    padding: 0.5em;
+  }
+  .portfolioHeading {
+    font-size: 3em;
+  }
+  .iconWrapper {
+    display: inline-block;
+    margin-left: 5em;
+  }
+
+  .circle {
+    float: none;
+    margin: 0;
+    margin-left: 8em;
+    margin-right: 5em;
+  }
+  .label {
+    margin-left: 6.5em;
+    font-weight: 600;
+  }
+
+  .backgroundTriangle { 
+    height: 250%;
+    width: 200%;
+    top: 0;
+    clip-path: polygon(0 0, 0 200%, 200% 200%);
+  }
 }
 
 
-/* Styling for responsiveness */
-@media all and (max-width: 100%) {
-
-}
-@media only screen
-and (min-width: 900px) {
-
-}
-@media only screen
-and (min-width: 500px)
-and (max-width: 800px) {
-
-}
