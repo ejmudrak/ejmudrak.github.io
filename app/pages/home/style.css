@@ -346,56 +346,119 @@ p {
 
 @media all and (max-width: 750px) and (max-device-width: 750px) {
   
-  .aboutText {
-    float: left;
-    margin-top: 1em;
-    margin-left: 2em;
-    font-size: 2em;
-    font-weight: 600;
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 
   .aboutContainer {
-    margin-top: 10%;
-    width: 225%;
-    height: 200%;
+    margin-top: 12%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 50%;
     float: none;
-
   }
+
+  .aboutHeading {
+    padding-top: 0.25em;
+    font-size: 2.75em;
+  }
+
+  .line {
+    margin-left: 1em;
+    width: 90%;
+  }
+
+  .aboutText {
+    float: left;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .portraitWrapper {
+    width: 6em;
+    height: 6em;
+    float: none;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+  }
+
+  .portrait {
+    margin-top: -1.5em;
+  }
+
   .portfolioContainer { 
     position: relative;
     z-index: 3;
     float: none;
-    width: 142%;
-    height: 75%;
-    margin-top: -200%;
-    margin-left: 50%;
-    border-radius: 0.5em;
-    padding: 0.5em;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    height: 50%;
+    border-radius: 0;
+    background-color: #fff;
+    padding-bottom: 1em;
+    padding-top: 0.25em;
   }
   .portfolioHeading {
-    font-size: 3em;
+    font-size: 2em;
+    color: #4A5DEC;
   }
   .iconWrapper {
-    display: inline-block;
-    margin-left: 5em;
+    display: inline-flex;
+    margin-top: 0.75em;
+    margin-left: 3em;
+    flex-direction: row;
   }
 
   .circle {
+    width: 4em;
+    height: 4em;
     float: none;
     margin: 0;
-    margin-left: 8em;
-    margin-right: 5em;
+    margin-left: 0em;
+    margin-right: 0em;
+    border: 4px solid #4A5DEC;
+    border-radius: 50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
   }
+
+  .codeIcon { top: 0.85em; left: 0.4em;}
+  .designIcon { top: 1.25em; left: 0.4em;}
+  .designCircle { margin-left: -0.75em; }
+
   .label {
-    margin-left: 6.5em;
+    margin-top: 1em;
+    margin-left: 1.5em;
     font-weight: 600;
+    color: #4A5DEC;
+  }
+
+  .divider {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 0.1em;
+    background-color: #4A5DEC;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    /*margin-left: 0.5em;*/
+    border-radius: 10em;
   }
 
   .backgroundTriangle { 
-    height: 250%;
-    width: 200%;
-    top: 0;
-    clip-path: polygon(0 0, 0 200%, 200% 200%);
+    width: 100%;
+    height: 100%;
+    top: 5em;
+    clip-path: polygon(0 0, 0 100%, 75% 100%);
+    -webkit-clip-path: polygon(0 0, 0 100%, 75% 100%);
   }
 }
 
