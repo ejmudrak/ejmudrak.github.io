@@ -11,8 +11,8 @@ html, body {
 
   /*background-color: #ffaacc;*/
   background: linear-gradient(90deg, #ffaacc, #e07694);
-  background-size: cover;
-  background-attachment: fixed;
+/*  background-size: cover;
+  background-attachment: fixed;*/
 
 /*   background: linear-gradient(90deg, #fff, #e07694);
    background-size: 200% 200%;
@@ -61,63 +61,80 @@ p {
   clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 
+.backgroundBack {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background-color: #fff;
+  opacity: 0.18;
+}
+
+.backgroundMid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75%;
+  background-color: #fff;
+}
+
+.backgroundFront {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 65%;
+  background-color: #4A5DEC;
+}
+
+.nameWrapper {
+  width: 100%;
+  height: 20%;
+}
+
+.name {
+  width: 30em;
+  display: block;
+  margin: auto;
+  padding-top: 1.25em;
+}
+
+.buttonContainer {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+  padding-top: 0;
+}
+
+.button {
+  padding-top: 1em;
+}
+
 /* ----------------------- ABOUT STYLES ------------------------ */
 
 .aboutContainer {
-  position: relative;
-  z-index: 1;
-
-  margin-left: 10%;
-  margin-top: 4%;
-
-  padding-right: 1%;
-
-  width: 54%;
-  height: 87%;
-  float: left;
-  background-color: #fff; 
-}
-
-.aboutHeading {
-
-  color: #4A5DEC;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-  font-size: 6em;
-
-  padding-right: 3em;
-
-  vertical-align: top;
-  margin-top: 0.15em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  display: block;
   width: 100%;
+  height: 25%;
+/*  display: block;
+  margin: auto;
+  text-align: center;*/
 }
 
-.line {
-  width: 85%;
-  height: 0.25em;
-  background-color: #4A5DEC;
-  margin-left: 3.5em;
-  border-radius: 10em;
-}
-
-.topWrapper {
-  display: inline-block;
+.aboutWrapper {
+  width: 50%;
+  display: block;
+  margin: auto;
 }
 
 .portraitWrapper {
-  position: relative;
-  z-index: 1;
-
   width: 8em;
   height: 9em;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   border-radius: 100em;
-  margin-top: 1.5em;
-  margin-left: 4em;
-  float: left;
+  margin-top: 8em;
 }
 
 .portrait {
@@ -127,11 +144,18 @@ p {
 }
 
 .aboutText {
-  margin-left: 11.5em;
-  margin-right: 0.5em;
-  margin-top: 3em;
+  width: 75%;
+  height: 100%;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+  /*padding-bottom: 1.5em;*/
+  display: inline-block;
+  position: relative;
+  z-index: 1;
   font-weight: 500;
   font-size: 1.2em;
+  color: #ffffff;
+
 }
 
 @keyframes slideIn {
