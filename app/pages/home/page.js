@@ -95,7 +95,7 @@ class Blocks extends React.Component {
 
   render () {
     return (
-      <div className={styles.blocks} onTouchTap={this.toTest} >
+      <div className={styles.blocks} >
         <div className={styles.block1}></div>      
         <div className={styles.block2}></div>      
         <div className={styles.block3}></div>      

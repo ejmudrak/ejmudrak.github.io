@@ -15,7 +15,7 @@ export default class Test extends React.Component {
 	  render() {
 	    return (
 	      <div onTouchTap={this.goBack}>
-	       HELLO WORLD!
+	        GO BACK. HELLO WORLD! 
 	      </div>
 	    );
 	  }
