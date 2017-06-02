@@ -16,7 +16,7 @@ import DesignIcon from './design-blue.png';
 import CodeSnippetIcon from './code-snippet.png';
 import Portrait from './portrait.jpg';
 import Name from './wordmark2.png';
-import Computer from './computer.png';
+import ComputerDrawing from './computer.png';
 
 const aboutText = "Hello, I'm Erik Mudrak, and I am drawn to user interface design, front end development, and project management. I strive to meld my skills to solve problems with tech in fresh places and in fresh ways."; 
 const secondaryText = "I'm looking for a team to build alongside";
@@ -31,6 +31,9 @@ export default class Home extends React.Component {
               </div>
               <Icons />
               <About />
+              <div className={styles.computerWrapper}>
+                <img className={styles.computer} src={ComputerDrawing} />
+              </div>
             </div>
         );
     }

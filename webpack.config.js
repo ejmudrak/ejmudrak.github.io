@@ -26,7 +26,7 @@ module.exports = {
         test: /\.css$/,
         loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
       },
-      { test: /\.(png|.svg|jpg|ico)$/, loader: 'url-loader?limit=500000' },
+      { test: /\.(png|.svg|jpg|ico)$/, loader: 'url-loader?limit=1000000' },
       // {
       //     test: /\.scss$/,
       //     loaders: ['style', 'css', 'sass']
