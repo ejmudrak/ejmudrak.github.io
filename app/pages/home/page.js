@@ -10,6 +10,7 @@ import { browserHistory } from 'react-router';
 import MediaQuery from 'react-responsive';
 
 import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ArrowDownward from 'material-ui/svg-icons/navigation/arrow-downward';
 
 import CodeIcon from './code-blue.png';
 import DesignIcon from './design-blue.png';
@@ -20,6 +21,41 @@ import ComputerDrawing from './computer.png';
 
 const aboutText = "Hello, I'm Erik Mudrak, and I am drawn to user interface design, front end development, and project management. I strive to meld my skills to solve problems with tech in fresh places and in fresh ways."; 
 const secondaryText = "I'm looking for a team to build alongside";
+
+var projects = [
+
+  { 
+    title: "Greenhouse",
+    desc: "Description",
+    img: "",
+  },
+  { 
+    title: "Record Bin",
+    desc: "Description",
+    img: "",
+  },
+  { 
+    title: "Project",
+    desc: "Description",
+    img: "",
+  },
+  { 
+    title: "Project",
+    desc: "Description",
+    img: "",
+  },
+  { 
+    title: "Project",
+    desc: "Description",
+    img: "",
+  },
+  { 
+    title: "Project",
+    desc: "Description",
+    img: "",
+  }
+
+];
 
 export default class Home extends React.Component {
     render() {
@@ -34,36 +70,13 @@ export default class Home extends React.Component {
               <div className={styles.computerWrapper}>
                 <img className={styles.computer} src={ComputerDrawing} />
               </div>
+              <div className={styles.arrowWrapper}>
+                <ArrowDownward className={styles.arrow} color="white"  />
+              </div>
+              <Portfolio />
             </div>
         );
     }
-}
-
-class Portfolio extends React.Component {
-
-  render () {
-
-    return (
-      <div className={styles.portfolioContainer}>
-        <div className={styles.portfolioHeading}>Portfolio</div>
-        <a className={styles.iconWrapper} href="http://www.github.com/ejmudrak" target="_blank">
-          <div className={styles.circle} >
-            <img className={styles.codeIcon} src={CodeIcon} />
-          </div>
-          <div className={styles.label}>Code</div>
-        </a>
-       <MediaQuery query='(max-device-width: 750px)'>
-         <div className={styles.divider}></div> 
-      </MediaQuery>
-        <a className={styles.iconWrapper} href="http://www.behance.net/ejmudrak" target="_blank">
-          <div className={[styles.circle, styles.designCircle].join(' ')} >
-            <img className={styles.designIcon} src={DesignIcon} />
-          </div>
-          <div className={styles.label}>Design</div>
-        </a>
-      </div>
-    );
-  }
 }
 
 class About extends React.Component {
@@ -75,33 +88,6 @@ class About extends React.Component {
          <div className={styles.portraitWrapper}><img className={styles.portrait} src={Portrait} /></div>
          <p className={styles.aboutText}>{ aboutText }</p>
        </div>
-      </div>
-    );
-  }
-}
-
-class Blocks extends React.Component {
-
-  toTest = () => browserHistory.push('/test');
-
-  render () {
-    return (
-      <div className={styles.blocks} >
-        <div className={styles.block1}></div>      
-        <div className={styles.block2}></div>      
-        <div className={styles.block3}></div>      
-        <div className={styles.circle1}></div>
-      </div>
-    );
-  }
-}
-
-class CodeSnippet extends React.Component {
-
-  render () {
-    return (
-      <div>
-        <img className={styles.codeSnippet} src={CodeSnippetIcon} />
       </div>
     );
   }
@@ -132,6 +118,45 @@ class Icons extends React.Component {
     );
   }
 }
+
+class Portfolio extends React.Component {
+
+  render () {
+
+    return (
+      <div className={styles.portfolioContainer}>
+        <Header />
+        <Cards />
+      </div>
+    );
+  }
+}
+
+class Cards extends React.Component {
+
+  render () {
+    return (
+      <div className={styles.cardsContainer}>
+      
+      </div>
+    );
+  }
+}
+
+
+class Header extends React.Component {
+
+    render() {
+        return (
+          <div className={styles.headerContainer}>
+            <div className={styles.leftLine}></div>
+            <div className={styles.headerText}>PORTFOLIO</div>
+            <div className={styles.rightLine}></div>
+          </div>
+        );
+    }
+}
+
 
 
 
